@@ -31,15 +31,33 @@ class NumNum
 
     public function findSpecial()
     {
-        $ans = [];
+        $nums = range(1,9);
 
-        for ($num = $this->min; $num <= $this->max; $num++) {
-            if ($this->isSpecial($num)) {
-                $ans[] = $num;
-            }
+        while ($nums[0] < $this->min) {
+            $nums = $this->iterateSpecial($nums);
         }
 
-        return $ans;
+        return $nums;
+    }
+
+    private function iterateSpecial(array $oldNums)
+    {
+        $newNums = [];
+
+        foreach ($oldNums as $num) {
+            for ($i = 1; $i < 10; $i++) {
+                $tryNum = ($num * 10) + $i;
+
+                if ($tryNum > $this->max) {
+                    return $newNums;
+                }
+
+                if ($this->isSpecial($tryNum)) {
+                    $newNums[] = $tryNum;
+                }
+            }
+        }
+        return $newNums;
     }
 
     private function followsRule($num)
