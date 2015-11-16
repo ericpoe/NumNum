@@ -1,0 +1,19 @@
+{
+    "name": "ericpoe/numnum",
+    "require-dev": {
+        "phpunit/phpunit": "^5.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Eric Poe",
+            "email": "eric.poe@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "NumNum\\": "src"
+        }
+    }
+}
