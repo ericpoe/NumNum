@@ -14,7 +14,9 @@ There is only one number between 111,111,111 and 999,999,999 that fulfills these
 
 ## The Problem with Trying Every Number
 
-I first tried a brute force check of all numbers between the 9-digit min and the 9-digit max. This took over 160 minutes on my desktop. This generated much heat.
+I first tried a brute force check of all numbers between the 9-digit min and the 9-digit max.
+
+This took over 300 minutes on my laptop. This generated much heat.
 
 This algorithm is used in the `bruteForce` branch.
 
