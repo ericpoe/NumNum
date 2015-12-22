@@ -27,6 +27,6 @@ Rather than waste time on numbers that we already know are bad, I decided to dis
 
 So, let's start with the 3rd pass of building up the numbers. My known good under 20 (for the sake of brevity) are [12, 14, 16, 18]. That already knocks out [100 - 119, 130-139, 150-159, 170-179, 190-199]. So, I take the '12' and make it '121', which doesn't fit; '12' -> '122' doesn't fit. '12' -> '123' fits, so it gets added to a new pool of known-good. '124', & '125' don't fit, but '126' does, so it gets added to the same new pool of known-good. Keep doing this until the pool of known-good 3-digit numbers is filled. Then base the 4th pass off of those numbers.
 
-This took a tenth of 1 second on my desktop.
+This took a tenth of 1 second on my laptop.
 
 This algorithm is used in the `faster` branch.
